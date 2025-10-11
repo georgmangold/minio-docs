@@ -1,30 +1,37 @@
 name: Staging
-
 on:
-  pull_request:
-    type: ["opened","synchronize"]
+  # run manualy from the Actions tab
+  workflow_dispatch:
+  #pull_request:
+  #  types: ["opened","synchronize"]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref }}
+  cancel-in-progress: true
 
 jobs:
   build-and-stage:
+    # skip for now
+    if: false
 
     runs-on: ubuntu-latest
 
     steps:
     - name: checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
 
     - name: install-python
       uses: actions/setup-python@v5
       with:
-        python-version: '3.12'
+        python-version: '3.13'
 
     - name: pip-requirements
       run: pip install -r requirements.txt
 
     - name: npm-setup
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v5
       with:
-        node-version: 20
+        node-version: 24
 
     - name: npm-install-setup
       uses: bahmutov/npm-install@v1
