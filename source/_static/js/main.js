@@ -15,8 +15,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
   // --------------------------------------------------
   // Dynamic sidebar scroll on non read-mode.
-	// This'll allow the sidebar to display all content,
-	// without scrolling the body. 
+  // This'll allow the sidebar to display all content,
+  // without scrolling the body. 
   // --------------------------------------------------
   const sidebarEl = document.querySelector(".sidebar");
   const headerEl = document.querySelector(".header");
@@ -27,15 +27,15 @@ window.addEventListener("DOMContentLoaded", (event) => {
     var headerViewHeight = headerEl.clientHeight - root.scrollTop;
     var sidebarHeight = headerViewHeight > 0 ? `calc(100vh - ${headerViewHeight}px)` : "100vh";
     var sidebarReadModeHeight = window.innerWidth > 991 ? sidebarHeight : "100vh";
-      
-    if(!root.classList.contains("read-mode")) {
+
+    if (!root.classList.contains("read-mode")) {
       sidebarEl.style.setProperty("height", sidebarHeight);
       tocEl.style.setProperty("height", sidebarHeight);
     }
     else {
       sidebarEl.style.setProperty("height", sidebarReadModeHeight);
-      
-      if(window.innerWidth > 991) {
+
+      if (window.innerWidth > 991) {
         tocEl.style.setProperty("height", sidebarReadModeHeight);
       }
       else {
@@ -43,15 +43,15 @@ window.addEventListener("DOMContentLoaded", (event) => {
       }
     }
   }
-  
+
   setTimeout(() => {
     setSidebarHeight();
-    
+
     // Scroll sidebar to active doc items
-    if(activeDocEl && activeDocEl.offsetTop > 400) {
+    if (activeDocEl && activeDocEl.offsetTop > 400) {
       sidebarEl.scrollTop = activeDocEl.offsetTop - 40;
     }
-    
+
     // Make the sidebar is scrollable.
     sidebarEl.classList.remove("inactive");
 
@@ -68,27 +68,27 @@ window.addEventListener("DOMContentLoaded", (event) => {
   document.addEventListener("scroll", (e) => {
     setSidebarHeight();
   });
- 
+
   // --------------------------------------------------
   // Read mode
   // --------------------------------------------------
   (function () {
     const readModeEl = document.getElementById("read-mode-toggle");
-    
+
     // Toggle read mode on icon click
-    if(readModeEl) {
-      /*readModeEl.addEventListener("click", (event) => {
+    if (readModeEl) {
+      readModeEl.addEventListener("click", (event) => {
         document.documentElement.classList.toggle("read-mode");
-  
+
         // Re-calculate sidebar height
         setSidebarHeight();
-  
+
         if (document.documentElement.classList.contains("read-mode")) {
           localStorage.setItem("read-mode", "true");
         } else {
           localStorage.setItem("read-mode", "false");
         }
-      });*/
+      });
     }
 
     // Turn on read mode on smaller screen size.
@@ -97,13 +97,17 @@ window.addEventListener("DOMContentLoaded", (event) => {
       readModeLs = localStorage.getItem("read-mode");
 
       if (window.innerWidth < 1280) {
-        document.documentElement.classList.add("read-mode");
+        if (readModeLs == null || readModeLs == "false") {
+          document.documentElement.classList.add("read-mode");
+        }
       } else {
-        document.documentElement.classList.remove("read-mode");
+        if (readModeLs == "false") {
+          document.documentElement.classList.remove("read-mode");
+        }
       }
 
-			// Re-calculate sidebar height
-			setSidebarHeight();
+      // Re-calculate sidebar height
+      setSidebarHeight();
     }
 
     var resizeTimer;
@@ -121,7 +125,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   // --------------------------------------------------
   // Dark mode
   // --------------------------------------------------
-  /* (function () {
+  (function () {
     const darkModeEl = document.getElementById("dark-mode-toggle");
 
     darkModeEl.addEventListener("click", (event) => {
@@ -134,7 +138,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
       }
     });
   })();
- */
+
 
   // --------------------------------------------------
   // TOC, External Links
@@ -174,9 +178,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
       const extVideoItems = document.querySelectorAll(".extlinks-video a");
       extVideoItems.forEach(item => {
-         item.setAttribute("target","_blank");
-         item.setAttribute("rel", "noopener");
-         item.setAttribute("rel", "noreferrer");
+        item.setAttribute("target", "_blank");
+        item.setAttribute("rel", "noopener");
+        item.setAttribute("rel", "noreferrer");
       });
     }
 
@@ -186,13 +190,13 @@ window.addEventListener("DOMContentLoaded", (event) => {
     }
     else {
       for (i = 0; i < asideElements.length; i++) {
-         tocAsideEl.appendChild(asideElements[i]);
-       }
+        tocAsideEl.appendChild(asideElements[i]);
+      }
     }
-    
+
     // Treat the TOC as a dropdown in mobile
     const tocToggleEl = document.querySelector(".topic-title");
-    if(tocToggleEl) {
+    if (tocToggleEl) {
       tocToggleEl.addEventListener("click", (event) => {
         event.preventDefault();
         tocMenuEl.closest(".content__toc").classList.toggle("active");
@@ -214,7 +218,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
       document.documentElement.classList.remove("doc-active", "nav-active");
 
       // Hide opened toc menu on mobile
-      if(tocMenuEl) {
+      if (tocMenuEl) {
         tocMenuEl.closest(".content__toc").classList.remove("active");
       }
     }
@@ -233,7 +237,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
           backdrop.remove();
         }
 
-        if(target == "doc") {
+        if (target == "doc") {
           sidebarEl.insertAdjacentElement("afterend", backdrop);
         }
         else {
@@ -264,44 +268,44 @@ window.addEventListener("DOMContentLoaded", (event) => {
       });
     });
   })();
-  
+
 
   // --------------------------------------------------
   // Inserts the personas into the left-hand nav
   // --------------------------------------------------
-  (function() {
+  (function () {
     const operationPersona = document.createElement("li");
     operationPersona.innerHTML = "Operations";
     operationPersona.className = "docs__title";
- 
+
     const administrationPersona = document.createElement("li");
     administrationPersona.innerHTML = "Administration";
     administrationPersona.className = "docs__title";
- 
+
     const developerPersona = document.createElement("li");
     developerPersona.innerHTML = "Developers";
     developerPersona.className = "docs__title";
- 
+
     const referencePersona = document.createElement("li");
     referencePersona.innerHTML = "Reference";
     referencePersona.className = "docs__title";
- 
+
     const list = document.getElementsByClassName("toctree-l1");
- 
-    for ( i = 0; i < list.length; i++) {
+
+    for (i = 0; i < list.length; i++) {
       const page_title = list[i].childNodes[0].innerHTML;
       if (page_title === "Install and Deploy MinIO" || page_title === "Deploy the MinIO Operator") {
         // First persona is not listed in the design, so commenting it for now. 
         //list[i].insertAdjacentElement('beforebegin',operationPersona);
       }
       else if (page_title === "MinIO Console") {
-        list[i].insertAdjacentElement('beforebegin',administrationPersona);
+        list[i].insertAdjacentElement('beforebegin', administrationPersona);
       }
       else if (page_title === "Software Development Kits (SDK)") {
-        list[i].insertAdjacentElement('beforebegin',developerPersona);
+        list[i].insertAdjacentElement('beforebegin', developerPersona);
       }
       else if (page_title === "Kubernetes Reference") {
-        list[i].insertAdjacentElement('beforebegin',referencePersona);
+        list[i].insertAdjacentElement('beforebegin', referencePersona);
       }
     }
   })();
@@ -312,7 +316,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   // --------------------------------------------------
   (function () {
     const tableEls = document.querySelectorAll("table");
-    if(tableEls.length > 0) {
+    if (tableEls.length > 0) {
       tableEls.forEach((item) => {
         var tableWrapper = document.createElement("div");
         tableWrapper.classList.add("table-responsive", "scrollbar");
@@ -328,7 +332,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   // --------------------------------------------------
   (function () {
     const headerlinkEls = document.querySelectorAll(".headerlink");
-    if(headerlinkEls.length > 0) {
+    if (headerlinkEls.length > 0) {
       headerlinkEls.forEach((item) => {
         var parent = item.parentNode;
         parent.classList.add("headerlink-wrapper");
@@ -341,7 +345,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   // --------------------------------------------------
   (function () {
     const preEls = document.querySelectorAll(".highlight pre");
-    if(preEls.length > 0) {
+    if (preEls.length > 0) {
       preEls.forEach((item) => {
         item.classList.add("scrollbar");
       });
@@ -353,7 +357,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   // --------------------------------------------------
   (function () {
     const links = document.querySelectorAll(".content__main a.external");
-    if(links.length > 0) {
+    if (links.length > 0) {
       links.forEach((item) => {
         item.setAttribute("target", "_blank");
         item.setAttribute("rel", "noopener");
@@ -369,11 +373,11 @@ window.addEventListener("DOMContentLoaded", (event) => {
     function toggleArrows(elem, arrowLeft, arrowRight, callback) {
       var scrollWidth = elem.scrollWidth;
       var scrollLeft = elem.scrollLeft + elem.clientWidth;
-      
+
       if (callback) {
         callback();
       }
-  
+
       scrollWidth - scrollLeft <= 1
         ? arrowRight.classList.add("inactive")
         : arrowRight.classList.remove("inactive");
@@ -396,7 +400,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
       window.innerWidth < 1400 ? scrollLength = 500 : scrollLength = 1000;
     }
 
-    if(cards.length > 0) {
+    if (cards.length > 0) {
       cards.forEach((item) => {
         // Get the amount of columns
         const colsAmount = item.className.match(/(^|\s)sd-card-cols-(\w+)/g).pop().split('-').pop();
@@ -410,17 +414,17 @@ window.addEventListener("DOMContentLoaded", (event) => {
         const arrowLeft = document.createElement("button");
         arrowLeft.classList.add("carousel-arrow", "carousel-arrow--left");
         arrowLeft.innerHTML = cardsArrowIcon;
-        arrowLeft.onclick = function() {
-          item.scrollLeft -= scrollLength/colsAmount;
+        arrowLeft.onclick = function () {
+          item.scrollLeft -= scrollLength / colsAmount;
         }
 
         const arrowRight = document.createElement("button");
         arrowRight.classList.add("carousel-arrow", "carousel-arrow--right");
         arrowRight.innerHTML = cardsArrowIcon;
-        arrowRight.onclick = function() {
-          item.scrollLeft += scrollLength/colsAmount;
+        arrowRight.onclick = function () {
+          item.scrollLeft += scrollLength / colsAmount;
         }
-        
+
         wrapper.insertAdjacentElement("afterbegin", arrowLeft);
         wrapper.insertAdjacentElement("beforeend", arrowRight);
 
@@ -439,7 +443,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     // Platform navs
     // --------------------------------------------------
     const platformNavs = document.querySelectorAll(".platform-nav nav");
-    const platformNavArrowIcon =  `<svg width="25" height="25" viewbox="0 0 48 48">
+    const platformNavArrowIcon = `<svg width="25" height="25" viewbox="0 0 48 48">
                                     <path d="M17.7 34.9q-.4-.5-.425-1.1-.025-.6.425-1.05l8.8-8.8-8.85-8.85q-.4-.4-.375-1.075.025-.675.425-1.075.5-.5 1.075-.475.575.025 1.025.475l9.95 9.95q.25.25.35.5.1.25.1.55 0 .3-.1.55-.1.25-.35.5l-9.9 9.9q-.45.45-1.05.425-.6-.025-1.1-.425Z" />
                                   </svg>`;
     function sc(el) {
@@ -451,27 +455,27 @@ window.addEventListener("DOMContentLoaded", (event) => {
       }
     }
 
-    if(platformNavs.length > 0) {
+    if (platformNavs.length > 0) {
       platformNavs.forEach((item) => {
         const arrowLeft = document.createElement("button");
         arrowLeft.type = "button";
         arrowLeft.innerHTML = platformNavArrowIcon;
         arrowLeft.setAttribute("data-nav-dir", "left");
-        arrowLeft.onclick = function() {
+        arrowLeft.onclick = function () {
           item.scrollLeft -= 200;
         }
-  
+
         const arrowRight = document.createElement("button");
         arrowRight.type = "button";
         arrowRight.innerHTML = platformNavArrowIcon;
         arrowRight.setAttribute("data-nav-dir", "right");
-        arrowRight.onclick = function() {
+        arrowRight.onclick = function () {
           item.scrollLeft += 200;
         }
-  
+
         item.insertAdjacentElement("beforebegin", arrowLeft);
         item.insertAdjacentElement("afterend", arrowRight);
-  
+
         item.addEventListener("scroll", () => {
           toggleArrows(item, arrowLeft, arrowRight, sc(item));
         });
@@ -479,7 +483,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
         window.addEventListener("resize", () => {
           toggleArrows(item, arrowLeft, arrowRight, sc(item));
         });
-  
+
         toggleArrows(item, arrowLeft, arrowRight, sc(item));
       });
     }
@@ -495,18 +499,18 @@ window.addEventListener("DOMContentLoaded", (event) => {
     var style = window.getComputedStyle(elem);
     return (elem.offsetWidth > 0 || elem.offsetHeight > 0) && style.display !== 'none' && style.visibility !== 'hidden';
   }
-  
+
   function hashScroll() {
     // Target ID - where the browser should scroll to
     const hashElem = document.getElementById(window.location.hash.substring(1));
-  
+
     // Check if the hash is valid
     // If it is, but not visible, the corresponding tab is also not visible.
     // Make the tab active and scroll to it
-    if(hashElem) {
-      if(!isHashElemeVisible(hashElem)) {
+    if (hashElem) {
+      if (!isHashElemeVisible(hashElem)) {
         hashElem.closest(".sd-tab-content").previousElementSibling.click();
-  
+
         setTimeout(() => {
           hashElem.scrollIntoView({ behavior: 'smooth' });
         }, 100);
@@ -516,7 +520,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
       }
     }
   }
-  
+
   // Listen for hash changes
   window.addEventListener("hashchange", () => {
     hashScroll();
@@ -525,13 +529,13 @@ window.addEventListener("DOMContentLoaded", (event) => {
   // Listen for click events on internal references
   const references = document.querySelectorAll("a.reference.internal");
 
-  if(references.length > 0) {
+  if (references.length > 0) {
     references.forEach((item) => {
       item.addEventListener("click", () => {
         hashScroll();
       });
     });
   }
-  
+
   hashScroll()
 });
