@@ -34,7 +34,7 @@ The procedures on this page decommission and remove one or more server pools fro
 
    Decommissioning is a major administrative operation that requires care in planning and execution, and is not a trivial or 'daily' task. 
 
-   `MinIO SUBNET <https://min.io/pricing?jmp=docs>`__ users can `log in <https://subnet.min.io/>`__ and create a new issue related to decommissioning. 
+   `MinIO SUBNET <https://min.io/pricing>`__ users can `log in <https://subnet.min.io/>`__ and create a new issue related to decommissioning. 
    Coordination with MinIO Engineering via SUBNET can ensure successful decommissioning, including performance testing and health diagnostics.
 
    Community users can seek support on the `MinIO Community Slack <https://slack.min.io>`__. 

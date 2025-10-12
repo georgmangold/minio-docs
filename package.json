@@ -1,7 +1,7 @@
 {
   "name": "minio-documentation",
   "version": "1.0.0",
-  "description": "Official MinIO documentation",
+  "description": "Unofficial documentation for MinIO",
   "main": "index.rst",
   "scripts": {
     "watch": "gulp watch",

@@ -57,7 +57,7 @@ write errors.
 .. admonition:: MinIO Professional Support
    :class: note
 
-   `MinIO SUBNET <https://min.io/pricing?jmp=docs>`__ users can
+   `MinIO SUBNET <https://min.io/pricing>`__ users can
    `log in <https://subnet.min.io/>`__ and create a new issue related to drive, node, or site failures. 
    Coordination with MinIO Engineering via SUBNET can ensure successful recovery operations of production MinIO deployments, including root-cause analysis, and health diagnostics.
 

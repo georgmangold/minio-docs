@@ -103,7 +103,7 @@ To update deployments managed using ``systemctl``, see :ref:`minio-upgrade-syste
    - ppc64le
    - s390x
 
-   For instructions to download the binary, RPM, or DEB files for those architectures, see the `MinIO download page <https://min.io/download#/linux?ref=docs-install>`__.
+   For instructions to download the binary, RPM, or DEB files for those architectures, see the `MinIO download page <https://min.io/download#/linux-install>`__.
 
 .. end-install-minio-binary-desc
 

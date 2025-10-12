@@ -200,24 +200,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
     }
   })();
 
-
-  // --------------------------------------------------
-  // Cookie banner
-  // --------------------------------------------------
-  (function () {
-    var cookieLs = localStorage.getItem("set-cookie");
-    const cookieBanner = document.getElementById("cookie");
-    if (cookieLs == null) {
-      cookieBanner.classList.add("show");
-    }
-
-    cookieBanner.addEventListener("click", (event) => {
-      localStorage.setItem("set-cookie", "true");
-      cookieBanner.classList.remove("show");
-    });
-  })();
-
-  
   // --------------------------------------------------
   // Asides: Sidebar and Nav
   // --------------------------------------------------

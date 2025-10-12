@@ -140,7 +140,7 @@ Erasure Parity and Storage Efficiency
 
 Setting the parity for a deployment is a balance between availability and total usable storage. 
 Higher parity values increase resiliency to drive or node failure at the cost of usable storage, while lower parity provides maximum storage with reduced tolerance for drive/node failures. 
-Use the MinIO `Erasure Code Calculator <https://min.io/product/erasure-code-calculator?ref=docs>`__ to explore the effect of parity on your planned cluster deployment.
+Use the MinIO `Erasure Code Calculator <https://min.io/product/erasure-code-calculator>`__ to explore the effect of parity on your planned cluster deployment.
 
 The following table lists the outcome of varying erasure code parity levels on a MinIO deployment consisting of 1 node and 16 1TB drives:
 

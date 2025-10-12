@@ -66,7 +66,7 @@ MinIO supports encrypting compressed objects but recommends against combining co
 Before enabling encryption for compressed objects, carefully consider the security needs of your environment.
 
 See `Transparent Data Compression on MinIO <https://blog.min.io/transparent-data-compression/>`__ for more about combining compression and encryption.
-|subnet| users can `log in <https://subnet.min.io/?ref=docs>`__ and engage with our engineering and security teams to review encryption options.
+|subnet| users can `log in <https://subnet.min.io/>`__ and engage with our engineering and security teams to review encryption options.
 
 
 Tutorials

@@ -14,7 +14,7 @@ Background
 ----------
 
 The MinIO Gateway and the related filesystem mode entered a feature freeze in July 2020.
-In February 2022, MinIO announced the `deprecation of the MinIO Gateway <https://blog.min.io/deprecation-of-the-minio-gateway/?ref=docs>`__.
+In February 2022, MinIO announced the `deprecation of the MinIO Gateway <https://blog.min.io/deprecation-of-the-minio-gateway/>`__.
 Along with the deprecation announcement, MinIO also announced that the feature would be removed in six months time.
 
 As of :minio-release:`RELEASE.2022-10-29T06-21-33Z`, the MinIO Gateway and the related filesystem mode code have been removed.

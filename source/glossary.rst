@@ -52,10 +52,6 @@ Glossary
      
      See also: :term:`tenant`.
 
-   cluster registration
-     Cluster registration links a MinIO deployment to a :term:`SUBNET` `subscription <https://min.io/pricing?jmp=docs>`__.
-     An organization may have more than one MinIO clusters registered to the same SUBNET subscription.
-
    Console
    MinIO Console
      Graphical User Interface (GUI) for interacting with a MinIO deployment or :term:`tenant`.
@@ -295,7 +291,7 @@ Glossary
      This term previously referred to the deprecated :ref:`Gateway or Filesystem Mode <minio-gateway-migration>` deployment types.
 
    SUBNET
-     `MinIO's Subscription Network <https://min.io/pricing?jmp=docs>`__ tracks support tickets and provides 24 hour direct-to-engineer access for subscribed accounts.
+     `MinIO's Subscription Network <https://min.io/pricing>`__ tracks support tickets and provides 24 hour direct-to-engineer access for subscribed accounts.
 
    tenant
    tenants

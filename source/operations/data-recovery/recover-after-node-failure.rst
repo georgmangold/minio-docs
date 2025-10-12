@@ -89,5 +89,5 @@ from the degraded state.
 Continue monitoring the deployment until healing completes. Deployments with
 persistent and repeated node failures should schedule dedicated maintenance to
 identify the root cause. Consider using
-`MinIO SUBNET <https://min.io/pricing?jmp=docs>`__ to coordinate with MinIO
+`MinIO SUBNET <https://min.io/pricing>`__ to coordinate with MinIO
 engineering around guidance for any such operations.
