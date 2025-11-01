@@ -12,7 +12,7 @@ The following checklists provide a high-level guideline for validating productio
 
 These checklists may not meet the precise requirements of your unique deployment topology or architecture, and are intended as a best-effort guide to reliable production deployments.
 
-|subnet| users can `log in <https://subnet.min.io/?ref=docs>`__ and create a new issue for pre-production deployment reviews. 
+|subnet| users can `log in <https://subnet.min.io/>`__ and create a new issue for pre-production deployment reviews. 
 Coordination with MinIO Engineering via SUBNET ensures end-to-end support for performant and reliable deployments.
 
 Community users can seek support on the `MinIO Community Slack <https://slack.min.io>`__. 

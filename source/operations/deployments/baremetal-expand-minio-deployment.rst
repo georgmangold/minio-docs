@@ -118,7 +118,7 @@ expected :abbr:`SLA (Service Level Agreement)` of the deployment.
 
 You can use the 
 `MinIO Erasure Code Calculator 
-<https://min.io/product/erasure-code-calculator?ref=docs>`__ to check the
+<https://min.io/product/erasure-code-calculator>`__ to check the
 :guilabel:`Erasure Code Stripe Size (K+M)` of your new pool. If the highest
 listed value is at least ``2 x EC:N``, the pool supports the deployment's
 erasure parity settings.

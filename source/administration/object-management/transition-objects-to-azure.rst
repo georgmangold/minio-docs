@@ -104,7 +104,7 @@ Exclusive Access to Remote Data
    changing the account would change the storage backend and prevent access
    to any objects transitioned to the original account/backend.
 
-   Please contact `MinIO Support <https://min.io/pricing?ref=docs>`__ if you need
+   Please contact `MinIO Support <https://min.io/pricing>`__ if you need
    situation-specific guidance around configuring Azure remote tiers.
 
 Availability of Remote Data

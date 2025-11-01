@@ -27,7 +27,7 @@ Resynchronization is a per-bucket process. You must repeat resynchronization for
 .. admonition:: Professional Support during BC/DR Operations
    :class: important
 
-   `MinIO SUBNET <https://min.io/pricing?jmp=docs>`__ users can `log in <https://subnet.min.io/>`__ and create a new issue related to resynchronization. Coordination with MinIO Engineering via SUBNET can ensure successful resynchronization and restoration of normal operations, including performance testing and health diagnostics.
+   `MinIO SUBNET <https://min.io/pricing>`__ users can `log in <https://subnet.min.io/>`__ and create a new issue related to resynchronization. Coordination with MinIO Engineering via SUBNET can ensure successful resynchronization and restoration of normal operations, including performance testing and health diagnostics.
 
    Community users can seek support on the `MinIO Community Slack <https://slack.min.io>`__. Community Support is best-effort only and has no SLAs around responsiveness.
 

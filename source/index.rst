@@ -8,8 +8,8 @@ MinIO High Performance Object Storage
 
    .. container:: extlinks-video
 
-      - `Installing and Running MinIO on Docker: Overview <https://youtu.be/mg9NRR6Js1s?ref=docs>`__
-      - `Installing and Running MinIO on Docker: Installation Lab <https://youtu.be/Z0FtabDUPtU?ref=docs>`__
+      - `Installing and Running MinIO on Docker: Overview <https://youtu.be/mg9NRR6Js1s>`__
+      - `Installing and Running MinIO on Docker: Installation Lab <https://youtu.be/Z0FtabDUPtU>`__
       - `Object Storage Essentials <https://www.youtube.com/playlist?list=PLFOIsHSSYIK3WitnqhqfpeZ6fRFKHxIr7>`__
       
       - `How to Connect to MinIO with JavaScript <https://www.youtube.com/watch?v=yUR4Fvx0D3E&list=PLFOIsHSSYIK3Dd3Y_x7itJT1NUKT5SxDh&index=5>`__
@@ -59,7 +59,7 @@ Quickstart
 
       1. Download the MinIO Server Process for your Operating System
 
-         Follow the instructions on the `MinIO Download Page <https://min.io/downloads?ref=docs>`__ for your operating system to download and install the :mc:`minio server` process.
+         Follow the instructions on the `MinIO Download Page <https://github.com/minio/minio>`__ for your operating system to download and install the :mc:`minio server` process.
 
       2. Create a folder for use with MinIO
 

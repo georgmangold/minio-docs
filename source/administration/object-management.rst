@@ -10,10 +10,10 @@ Object Management
 
 .. container:: extlinks-video
 
-   - `Versioning overview <https://youtu.be/XGOiwV6Cbuk?ref=docs>`__
-   - `Object locking and retention overview <https://youtu.be/Hk9Z-sltUu8?ref=docs>`__
-   - `MinIO Object Lifecycle Management Part I <https://youtu.be/Exg2KsfzHzI?ref=docs>`__
-   - `MinIO Object Lifecycle Management Part II <https://youtu.be/5fz3rE3wjGg?ref=docs>`__
+   - `Versioning overview <https://youtu.be/XGOiwV6Cbuk>`__
+   - `Object locking and retention overview <https://youtu.be/Hk9Z-sltUu8>`__
+   - `MinIO Object Lifecycle Management Part I <https://youtu.be/Exg2KsfzHzI>`__
+   - `MinIO Object Lifecycle Management Part II <https://youtu.be/5fz3rE3wjGg>`__
 
 .. _objects:
 
@@ -195,7 +195,7 @@ Delete operations against a WORM-locked object depend on the specific operation:
 You can only enable object locking when first creating a bucket.
 Enabling bucket locking also enables :ref:`versioning <minio-bucket-versioning>`.
 
-MinIO Object Locking provides key data retention compliance and meets SEC17a-4(f), FINRA 4511(C), and CFTC 1.31(c)-(d) requirements as per `Cohasset Associates <https://min.io/cohasset?ref=docs>`__.
+MinIO Object Locking provides key data retention compliance and meets SEC17a-4(f), FINRA 4511(C), and CFTC 1.31(c)-(d) requirements as per `Cohasset Associates <https://min.io/cohasset>`__.
 
 See :ref:`minio-object-locking` and :ref:`minio-object-delete` for more complete documentation.
 

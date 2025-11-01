@@ -12,8 +12,8 @@ Monitoring and Alerting using Prometheus
 
 .. container:: extlinks-video
 
-   - `Monitoring with MinIO and Prometheus: Overview <https://youtu.be/A3vCDaFWNNs?ref=docs>`__
-   - `Monitoring with MinIO and Prometheus: Lab <https://youtu.be/Oix9iXndSUY?ref=docs>`__
+   - `Monitoring with MinIO and Prometheus: Overview <https://youtu.be/A3vCDaFWNNs>`__
+   - `Monitoring with MinIO and Prometheus: Lab <https://youtu.be/Oix9iXndSUY>`__
 
 MinIO publishes cluster, node, bucket, and resource metrics using the :prometheus-docs:`Prometheus Data Model <concepts/data_model/#data-model>`.
 The procedure on this page documents the following:

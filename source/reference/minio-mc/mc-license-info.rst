@@ -16,7 +16,7 @@ Description
 .. start-mc-license-info-desc
 
 The :mc-cmd:`mc license info` command displays information about the MinIO deployment's license status.
-Specifically, whether the deployment uses the AGPLv3 Open Source license of the `MinIO Commercial License <https://min.io/product/subnet?ref=docs>`__.
+Specifically, whether the deployment uses the AGPLv3 Open Source license of the `MinIO Commercial License <https://min.io/product/subnet>`__.
 
 .. end-mc-license-info-desc
 
@@ -29,12 +29,12 @@ For example, the command returns the following information for an unregistered d
    You are using GNU AFFERO GENERAL PUBLIC LICENSE Version 3 (https://www.gnu.org/licenses/agpl-3.0.txt)
 
    If you are building proprietary applications, you may want to choose the commercial license 
-   included as part of the Standard and Enterprise subscription plans. (https://min.io/signup?ref=mc)
+   included as part of the Standard and Enterprise subscription plans. (https://min.io/signup)
 
    Applications must otherwise comply with all the GNU AGPLv3 License & Trademark obligations.
 
 Use :mc-cmd:`mc license register` to associate your deployment with your SUBNET account.
-If you are not already signed up for SUBNET, see the `Registration <https://min.io/pricing?ref=docs>`__ page.
+If you are not already signed up for SUBNET, see the `Registration <https://min.io/pricing>`__ page.
 
 Examples
 --------

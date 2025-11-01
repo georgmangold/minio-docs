@@ -126,5 +126,5 @@ from the degraded state.
 Monitor the cluster for any further drive failures. Some drive batches may fail
 in close proximity to each other. Deployments seeing higher than expected drive
 failure rates should schedule dedicated maintenance around replacing the known
-bad batch. Consider using `MinIO SUBNET <https://min.io/pricing?jmp=docs>`__ to
+bad batch. Consider using `MinIO SUBNET <https://min.io/pricing>`__ to
 coordinate with MinIO engineering around guidance for any such operations.

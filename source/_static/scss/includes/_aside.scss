@@ -8,7 +8,7 @@ div.sidebar {
     width: $sidebar-width;
     position: sticky;
     top: 0;
-    background-color: $white;
+    background-color: var(--body-bg);
     transition: opacity 400ms, transform 300ms;
     padding-top: var(--content-padding);
     overflow-y: auto;
@@ -20,7 +20,7 @@ div.sidebar {
     @include breakpoint-max(breakpoints(xl)) {
         padding: var(--content-padding);
     }
-    
+
     // Sidebar is set to hidden by default and later shown with JS.
     // This prevents the scrollbar-flicker due to
     // some other related JS functions that are bind with sidebar scroll.
@@ -47,6 +47,14 @@ div.sidebar {
             margin: 0 -0.75rem 1rem 0;
         }
     }
+}
+
+:root {
+	&.read-mode {
+		div.sidebar  {
+			padding: var(--content-padding);
+		}
+	}
 }
 
 .doc-active {

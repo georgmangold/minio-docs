@@ -12,9 +12,9 @@ Object Lifecycle Management
 
 .. container:: extlinks-video
 
-   - `MinIO Object Lifecycle Management Part I <https://youtu.be/Exg2KsfzHzI?ref=docs>`__
-   - `MinIO Object Lifecycle Management Part II <https://youtu.be/5fz3rE3wjGg?ref=docs>`__
-   - `MinIO Object Lifecycle Management Lab <https://youtu.be/5fz3rE3wjGg?ref=docs>`__
+   - `MinIO Object Lifecycle Management Part I <https://youtu.be/Exg2KsfzHzI>`__
+   - `MinIO Object Lifecycle Management Part II <https://youtu.be/5fz3rE3wjGg>`__
+   - `MinIO Object Lifecycle Management Lab <https://youtu.be/5fz3rE3wjGg>`__
 
 Use MinIO Object Lifecycle Management to create rules for time or date based automatic transition or expiry of objects. 
 For object transition, MinIO automatically moves the object to a configured remote storage tier. 

@@ -187,7 +187,7 @@
 .header__title {
 	font-size: clamp(40px, 6vw, 60px);
     line-height: 1.2;
-	color: $black;
+	color: var(--headings-color);
 	padding-bottom: 2rem;
 	margin-left: -0.25rem;
 	font-family: $font-family-heading;
@@ -204,8 +204,7 @@
 :root {
 	&:not(.read-mode) {
 		.header__actions {
-			position: absolute;
-			bottom: 2.5rem;
+			position: fixed;
 			right: var(--content-padding);
 		}
 	}

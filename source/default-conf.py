@@ -69,9 +69,9 @@ extlinks = {
     'openshift-docs'  : ('https://docs.openshift.com/container-platform/4.13/%s', None),
     'influxdb-docs'   : ('https://docs.influxdata.com/influxdb/v2.4/%s', None),
     'eks-docs'        : ('https://docs.aws.amazon.com/eks/latest/userguide/%s', None),
-    'minio-web'       : ('https://min.io/%s?ref=docs', None),
-    'minio-docs'      : ('https://docs.min.io/community/minio-object-store/%s?ref=docs-internal', None),
-    'minio-blog'      : ('https://blog.min.io/%s?ref=docs', None),
+    'minio-web'       : ('https://min.io/%s', None),
+    'minio-docs'      : ('https://georgmangold.github.io/minio-docs/%s', None),
+    'minio-blog'      : ('https://blog.min.io/%s', None),
     'gke-docs'        : ('https://cloud.google.com/kubernetes-engine/docs/%s', None),
     'gcp-docs'        : ('https://cloud.google.com/compute/docs/%s', None),
     'gcs-docs'        : ('https://cloud.google.com/storage/docs/%s', None),
@@ -166,25 +166,25 @@ html_static_path = ['_static']
 html_css_files = ['css/main.min.css', 'custom.css']
 
 html_js_files = [
-    ('https://cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js', {'defer': 'defer'}),
-    ('https://cdn.jsdelivr.net/npm/instantsearch.js@4', {'defer': 'defer'}),
+    #('https://cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js', {'defer': 'defer'}),
+    #('https://cdn.jsdelivr.net/npm/instantsearch.js@4', {'defer': 'defer'}),
     ('js/main.js', {'defer': 'defer'}),
-    ('js/instantSearch.js', {'defer': 'defer'}),
+    #('js/instantSearch.js', {'defer': 'defer'}),
 ]
 
 # Add https://www.min.io/robots.txt to html_extra_path list once available.
 html_extra_path = [ 'extra']
 
-html_baseurl = 'https://docs.min.io/community/minio-object-store/'
+html_baseurl = 'https://georgmangold.github.io/minio-docs/'
 
 # -- Project information -----------------------------------------------------
 
 
-project = 'Documentation for MinIO Object Storage' 
+project = 'Unofficial Documentation for MinIO Object Storage' 
 copyright = '2020-Present, MinIO, Inc. '
 author = 'MinIO Documentation Team'
-html_title = 'MinIO Object Storage (AGPLv3)'
-html_short_title = 'MinIO Object Storage'
+html_title = 'Unofficial Documentation for MinIO Object Storage (AGPLv3)'
+html_short_title = 'Unofficial Doc for MinIO'
 
 html_permalinks_icon = ''
 
@@ -221,8 +221,8 @@ rst_prolog = """
 .. |minio-rpms-390x| replace:: RPMS390XURL
 .. |minio-debs-390x| replace:: DEBS390XURL
 .. |minio-binarys-390x| replace:: MINIOS390XURL
-.. |subnet| replace:: `MinIO SUBNET <https://min.io/pricing?jmp=docs>`__
-.. |subnet-short| replace:: `SUBNET <https://min.io/pricing?jmp=docs>`__
+.. |subnet| replace:: MinIOSUBNET
+.. |subnet-short| replace:: SUBNET
 .. |SNSD| replace:: :abbr:`SNSD (Single-Node Single-Drive)`
 .. |SNMD| replace:: :abbr:`SNMD (Single-Node Multi-Drive)`
 .. |MNMD| replace:: :abbr:`MNMD (Multi-Node Multi-Drive)`
